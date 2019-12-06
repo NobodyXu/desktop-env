@@ -4,4 +4,4 @@
 
 user_units=~/.config/systemd/user/
 mkdir -p $user_units
-exec cp $1 $user_units
+cp $1 $user_units
