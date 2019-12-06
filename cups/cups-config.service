@@ -1,0 +1,15 @@
+[Unit]
+Description=configure cups print service
+
+[Service]
+Type=oneshot
+
+ExecStart=/usr/sbin/cupsaccept -U nobodyxu -h 127.0.0.1:631
+RemainAfterExit=True
+
+KillMode=process
+
+NoNewPrivileges=True
+
+[Install]
+WantedBy=default.target
