@@ -1,10 +1,6 @@
 #!/bin/bash
 
-user_unit=~/.config/systemd/user/
-
-mkdir -p $user_unit
-cp ./desktop-env/mega/mega.service $user_unit
-
+source ./desktop-env/add_user_unit.sh ./desktop-env/mega/mega.service
 systemctl --user enable mega
 
 echo
