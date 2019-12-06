@@ -3,9 +3,9 @@
 user_unit=~/.config/systemd/user/
 
 mkdir -p $user_unit
-cp mega.service $user_unit
+cp ./desktop-env/mega/mega.service $user_unit
 
-systemctl --user enable mega.service
+systemctl --user enable mega
 
 echo
 echo Please login to mega below and establish sync!
