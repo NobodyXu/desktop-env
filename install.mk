@@ -1,5 +1,5 @@
 # Global variables shall be put here
-# Variable name shall start with desktop-env_
+# Variable name shall start with de
 
 
 # Defines target for easy installation
