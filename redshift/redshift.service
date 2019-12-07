@@ -1,0 +1,16 @@
+[Unit]
+Description=Shifting screen to be warmer to protect eyes
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/redshift -l geoclue2 -m randr -t 4500:5300
+
+KillMode=process
+Restart=on-failure
+
+NoNewPrivileges=True
+
+[Install]
+WantedBy=default.target
