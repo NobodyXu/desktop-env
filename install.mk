@@ -4,4 +4,4 @@
 de-add_user_unit := ./desktop-env/add_user_unit.sh
 
 # Defines target for easy installation
-install_desktop-env: install_apt-fast
+install_desktop-env: apt_update install_apt-fast
