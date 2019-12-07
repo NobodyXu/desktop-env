@@ -1,0 +1,7 @@
+#!/bin/bash
+
+main() {
+    exec `dmenu_path | dmenu "$@"`
+}
+
+main "$@"
