@@ -1,0 +1,17 @@
+[Unit]
+Description=bluetooth manager systray
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStartPre=/usr/local/bin/wait_for i3blocks
+ExecStart=/usr/bin/blueman-applet
+
+KillMode=process
+Restart=on-failure
+
+NoNewPrivileges=True
+
+[Install]
+WantedBy=default.target
