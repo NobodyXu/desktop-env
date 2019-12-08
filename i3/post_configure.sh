@@ -4,10 +4,10 @@
 i3_conf=~/.config/i3/config
 
 if [ -e $i3_conf ]; then
-    mv $i3_conf ${i3_conf}.`date -u +%F`.bk
+    mv $i3_conf ${i3_conf}.`date -u +%F,%T`.bk
 fi
 
-ln `realpath ./desktop-env/i3/i3-config` $i3_conf
+ln -f `realpath ./desktop-env/i3/i3-config` $i3_conf
 
 # Post-configure for dmenu
 ## The optimized dmenu_run is required for my i3 config to work
@@ -22,7 +22,7 @@ sudo ln -sf /bin/bash /bin/sh
 i3blocks_conf=~/.config/i3blocks/config
 
 if [ -e $i3blocks_conf ]; then
-    mv $i3blocks_conf ${i3blocks_conf}.`date -u +%F`.bk
+    mv $i3blocks_conf ${i3blocks_conf}.`date -u +%F,%T`.bk
 fi
 
-ln `realpath ./desktop-env/i3/i3blocks-config` $i3blocks_conf
+ln -f `realpath ./desktop-env/i3/i3blocks-config` $i3blocks_conf
