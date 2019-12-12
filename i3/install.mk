@@ -6,5 +6,5 @@ de-i3_add_repo:
 	sudo $(apt) update
 
 de-install_i3: de-i3_add_repo de-install_feh de-install_amixer de-install_xbacklight
-	sudo $(apt) install -y i3 i3blocks bash
+	sudo $(apt) install -y i3 i3blocks bash imagemagick
 	./desktop-env/i3/post_configure.sh

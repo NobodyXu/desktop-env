@@ -194,3 +194,6 @@ bindsym XF86AudioMute exec "amixer -q set Master toggle && pkill -RTMIN+2 i3bloc
 #  - https://unix.stackexchange.com/questions/526653/control-screen-brightness-in-i3
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
+
+# Softkey for screenshot
+bindsym --release Print exec "import ~/Pictures/Screenshots/`date -u +%T,%F`.jpg"
