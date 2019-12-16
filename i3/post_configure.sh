@@ -9,6 +9,9 @@ fi
 
 ln -f `realpath ./desktop-env/i3/i3-config` $i3_conf
 
+## Install lock.sh
+sudo cp ./desktop-env/i3/lock.sh /usr/local/bin/lock.sh
+
 # Post-configure for dmenu
 ## The optimized dmenu_run is required for my i3 config to work
 sudo cp ./desktop-env/i3/dmenu_run /usr/local/bin/
