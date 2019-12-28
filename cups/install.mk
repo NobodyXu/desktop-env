@@ -7,4 +7,8 @@ de-install_cups:
 				-e "s/Require user @OWNER @SYSTEM/Require user @OWNER @SYSTEM ${USER}/g" \
 				/etc/cups/cupsd.conf
 	sudo systemctl enable cups
+	# Restart service so that:
+	#     - If the service is running (installed), it will be restarted;
+	#     - If not, it will be started.
+	sudo systemctl restart cups
 	./desktop-env/cups/post_configure.sh
