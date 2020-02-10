@@ -1,6 +1,6 @@
 install_desktop-env: de-install_i3
 
-de-i3_add_repo:
+de-i3_add_repo: install_apt-add-repository
 	# Add repo to use newest i3bar that support transparency
 	./desktop-env/i3/add_i3_repo.sh
 	sudo $(apt) update
