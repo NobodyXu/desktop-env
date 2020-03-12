@@ -12,5 +12,5 @@ for pic in /usr/share/backgrounds/*/*; do
     ln -s $pic
 done
 
-# Add cron job that automatically changes background
-(crontab -l; echo '0 * * * * feh --randomize --bg-fill ~/Pictures/Wallpapers/*') | crontab -
+# Add systemd timer that automatically changes background
+cp ./desktop-env/feh/update-desktop-background.* ~/.config/systemd/user/

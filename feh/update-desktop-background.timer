@@ -1,0 +1,9 @@
+[Unit]
+Description=automatically changing desktop background
+
+[Timer]
+OnActiveSec=1h
+OnBootSec=5s
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=automatically changing desktop background
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+
+Restart=on-failure
+RestartSec=1s
+
+NoNewPrivileges=True
