@@ -178,6 +178,10 @@ bar {
 # Set background
 exec_always --no-startup-id feh --randomize --bg-fill /home/nobodyxu/Pictures/Wallpapers/*
 
+# Start background tasks
+exec --no-startup-id systemctl --user restart blueman-applet.service
+exec --no-startup-id systemctl --user restart nm-applet.service
+
 # Start i3-battery-popup that warns low battery level
 exec --no-startup-id i3-battery-popup -L 40 -m "RUNNING OUT OF BATTERY!"
 # Make the warning windows shows everywhere

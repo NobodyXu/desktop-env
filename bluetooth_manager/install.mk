@@ -10,5 +10,4 @@ de-install_bluetooth_manager: de-install_i3
 	@echo Install interface
 	sudo $(apt) install -y blueman
 	$(de-add_user_unit) ./desktop-env/bluetooth_manager/blueman-applet.service
-	systemctl --user enable blueman-applet
 	systemctl --user start blueman-applet
