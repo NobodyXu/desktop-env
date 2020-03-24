@@ -12,5 +12,5 @@ cp ./desktop-env/feh/space.jpg $wallpapers/
 # Symlink system-provided backgrounds into wallpapers
 cd $wallpapers
 for pic in /usr/share/backgrounds/*/*; do
-    ln -s $pic
+    ln -s -f $pic
 done
