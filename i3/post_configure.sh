@@ -28,4 +28,5 @@ if [ -e $i3blocks_conf ]; then
     mv $i3blocks_conf ${i3blocks_conf}.`date -u +%F,%T`.bk
 fi
 
+mkdir -p ~/.config/i3blocks/
 ln -f `realpath ./desktop-env/i3/i3blocks-config` $i3blocks_conf
