@@ -5,3 +5,5 @@
 user_units=~/.config/systemd/user/
 mkdir -p $user_units
 cp $1 $user_units
+
+systemctl --user daemon-reload
