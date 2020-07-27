@@ -1,4 +1,7 @@
 #!/bin/sh
 
-sleep 3m && exec xset dpms force off &
-exec i3lock-fancy
+i3lock-fancy &
+while pgrep i3lock-fancy >/dev/null; do
+    sleep 5m;
+    xset dpms force off
+done
